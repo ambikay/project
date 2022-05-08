@@ -101,7 +101,7 @@
 			
 			//if the other bidder has a higher high-price then set the original player's bid to other's high price 
 			if (no > no2){
-				String update = "UPDATE bid SET price = ? WHERE username= '" + bidder2Name + "' AND serialNumber = '" + shoeID + "'";
+				String update = "UPDATE bid SET price = ? WHERE username= '" + bidder2Name + "' AND serialNumber = '" + item_id + "'";
 				PreparedStatement ps2 = con.prepareStatement(update);
 				newprice = no2+"";
 				//add parameters
@@ -111,7 +111,7 @@
 				ans = no;
 				//if original bidder has higher bid then set winner to the original bidder
 			}else{
-				String update = "UPDATE bid SET price = ? WHERE username= '" + userID + "' AND serialNumber = '" + shoeID + "'";
+				String update = "UPDATE bid SET price = ? WHERE username= '" + userID + "' AND serialNumber = '" + item_id + "'";
 				newprice = no+"";
 				PreparedStatement ps2 = con.prepareStatement(update);
 				//add parameters
